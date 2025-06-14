@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(243, 255, 255);
+    font-family: "Montserrat", sans-serif;
+}
+
+.contenedor-principal{
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: auto;
+}
+
+.narbar{
+    width: 100%;
+    background-color: #012a53;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;/*1rem = a 16px */
+    z-index: 1000; /*es el espacio entre elemntos entre si*/
+}
+
+.narbar-logo{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.menu-togle{
+    display: none;
+}
+
+.narbar-icono{
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #fff;
+}
+
+.narbar-menu{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.narbar-link{
+    text-decoration: none;color: #fff;
+    font-size: 1rem;
+    transition: color 0.3 ease;
+    font-weight: 500;
+}
+
+.narbar-link:hover{
+    color: #61ffdf;
+}
+
+/*Estilos del carrusel*/
+/*Estilos del carrusel*/
+/*Estilos del carrusel*/
+
+h2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 600px;
+    color: #fff;
+    font-size: 2.5rem;
+    text-align: center;
+    z-index: 2;
+}
+
+.contenedor-carrusel{
+    display: grid;
+    grid-template-columns: repeat(3,100%);
+    animation: carrusel 15s infinite;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+.contenedor-carrusel div{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    flex-shrink: 0;
+
+}
+
+.imagen1{
+position: relative;
+background-image: url(./imagenes/Carrusel/c1.jpeg);
+}
+
+.imagen2{
+position: relative;
+background-image: url(./imagenes/Carrusel/c2.jpeg);
+}
+
+.imagen3{
+position: relative;
+background-image: url(./imagenes/Carrusel/c3.jpeg);
+}
+
+@keyframes carrusel {
+    0%{transform: translateX(0%);}
+    20%{transform: translateX(0%);}
+    25%{transform: translateX(-100%);}
+    45%{transform: translateX(-100%);}
+    50%{transform: translateX(-200%);}
+    70%{transform: translateX(-200%);}
+    75%{transform: translateX(-100%);}
+    100%{transform: translateX(0%);}
+}
+
+/*Fin carrusel*/
+/*Fin carrusel*/
+/*Fin carrusel*/
+
+.contenedor-principal-card{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    padding-top: 30px;
+}
+
+.contenedor-card1{
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 30px;
+}
+
+.contenedor-card1 .card-productos1{
+    width: 280px;
+    height: 300px;
+    border-radius: 8px;
+    overflow: hidden;/*ocultar todo lo que sobra*/
+    margin: 20px;
+    text-align: center;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    transition: all 0.25;
+}
+.contenedor-card1 .card-productos1 img{
+    width: 280px;
+    height: 170px;
+    object-fit: cover;
+}
